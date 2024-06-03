@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Perfil</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand navbar-custom" href="index.html">
+                <img src="img/figuras.webp" alt="Logo"> Figurines
+            </a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link navbar-custom" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-custom" href="catalogo.html">Catálogo</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto" id="nav-user">
+                    <li class="nav-item">
+                        <a class="nav-link navbar-custom" id="login-link" href="login.html">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item d-none" id="user-menu">
+                        <a class="nav-link navbar-custom" id="username-display" href="profile.html"></a>
+                        <a class="nav-link navbar-custom" href="#" id="logout-link">Cerrar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-custom" href="carrito.html"><i class="fas fa-shopping-cart"></i> Carrito (<span id="cart-count">0</span>)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Imagen sección -->
+    <div class="image-container">
+        <img src="img/logo.jpg" alt="Hero Image" class="hero-image">
+    </div>
+    <!-- Perfil de Usuario -->
+    <div class="container">
+        <div class="row justify-content-center py-5">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4" id="nick">Perfil de Usuario</h2>
+                        <div id="alert-container"></div>
+                        <form id="profileForm" class="needs-validation" novalidate>
+                            <!-- Nombre Completo -->
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-control" id="fullName" required>
+                                <div class="invalid-feedback">Por favor, ingrese su nombre completo.</div>
+                            </div>
+                            <!-- Nombre de Usuario -->
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Nombre de Usuario</label>
+                                <input type="text" class="form-control" id="username" required>
+                                <div class="invalid-feedback">Por favor, ingrese un nombre de usuario.</div>
+                            </div>
+                            <!-- Correo Electrónico -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">Por favor, ingrese un correo electrónico válido.</div>
+                            </div>
+                            <!-- Fecha de Nacimiento -->
+                            <div class="mb-3">
+                                <label for="birthdate" class="form-label">Fecha de Nacimiento</label>
+                                <input type="date" class="form-control" id="birthdate" required>
+                                <div class="invalid-feedback">Por favor, ingrese su fecha de nacimiento.</div>
+                            </div>
+                            <!-- Contraseña -->
+                            <div class="mb-3">
+                                <label for="newPassword" class="form-label">Nueva Contraseña</label>
+                                <input type="password" class="form-control" id="newPassword" pattern="^(?=.*[A-Z])(?=.*\d).{6,18}$">
+                                <div class="invalid-feedback">
+                                    La contraseña debe tener entre 6 y 18 caracteres, incluir al menos una letra
+                                    mayúscula y un número.
+                                </div>
+                            </div>
+                            <!-- Dirección de Despacho -->
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Dirección de Despacho (Opcional)</label>
+                                <input type="text" class="form-control" id="address">
+                            </div>
+                            <!-- Botones -->
+                            <div class="d-flex justify-content-between">
+                                <button type="submit" class="btn btn-success">Guardar</button>
+                                <button id="adminButton" class="btn btn-danger d-none">Admin</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="py-3 my-4 bg-light">
+        <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+    </footer>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Script/profile.js"></script>
+    <script src="Script/navbar.js"></script>
+</body>
+
+</html>

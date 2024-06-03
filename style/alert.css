@@ -1,0 +1,18 @@
+.custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    min-width: 300px;
+    transition: all 0.5s ease;
+}
+
+.alert.hide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.alert.show {
+    opacity: 1;
+    transform: translateX(0);
+}

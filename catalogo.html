@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Catalogo</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand navbar-custom" href="index.html">
+                <img src="img/figuras.webp" alt="Logo"> Figurines
+            </a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link navbar-custom" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-custom" href="catalogo.html">Catálogo</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto" id="nav-user">
+                    <li class="nav-item">
+                        <a class="nav-link navbar-custom" id="login-link" href="login.html">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item d-none" id="user-menu">
+                        <a class="nav-link navbar-custom" id="username-display" href="profile.html"></a>
+                        <a class="nav-link navbar-custom" href="#" id="logout-link">Cerrar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-custom" href="carrito.html"><i class="fas fa-shopping-cart"></i>
+                            Carrito (<span id="cart-count">0</span>)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- imagen seccion -->
+    <div class="image-container">
+        <img src="img/logo.jpg" alt="Hero Image" class="hero-image">
+    </div>
+    <!-- Products Section -->
+    <div class="container my-4 content">
+        <!-- Alertas -->
+        <div id="alertContainer"></div>
+        <h2 class="text-center text-custom">Productos</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <h5>Precio</h5>
+                <ul class="list-unstyled">
+                    <li><input type="checkbox" id="price1"> $0 - $9.990</li>
+                    <li><input type="checkbox" id="price2"> $10.000 - $19.990</li>
+                    <li><input type="checkbox" id="price3"> $50.000 - $99.990</li>
+                    <li><input type="checkbox" id="price4"> Sobre $100.000</li>
+                </ul>
+
+                <h5>Marcas</h5>
+                <ul class="list-unstyled">
+                    <li><input type="checkbox" id="brand1"> Bandai</li>
+                    <li><input type="checkbox" id="brand2"> Bandai Hobby</li>
+                    <li><input type="checkbox" id="brand3"> Funko</li>
+                    <li><input type="checkbox" id="brand4"> Good Smile Company</li>
+                    <li><input type="checkbox" id="brand5"> Hasbro</li>
+                    <li><input type="checkbox" id="brand6"> MAFEX</li>
+                </ul>
+
+                <h5>Tipo</h5>
+                <ul class="list-unstyled">
+                    <li><input type="checkbox" id="type1"> Figuras Articuladas</li>
+                    <li><input type="checkbox" id="type2"> Figuras Estática</li>
+                    <li><input type="checkbox" id="type3"> Maqueta Armable</li>
+                </ul>
+            </div>
+
+            <!--funkos-->
+            <div class="col-md-9">
+                <div class="row">
+                    <!-- Product Card 1 -->
+                    <div class="col-md-4 mb-4" data-brand="Funko" data-type="Figuras Estática" data-price="10990">
+                        <div class="card product-card ">
+                            <img src="Productos-img/BLACK WIDOW.webp" class="card-img-top product-img" alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">POP MARVEL: BLACK WIDOW- TASKMASTER W/CLAWS</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $10.990</span><br>
+                                    In Stock
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="col-md-4 mb-4" data-brand="Funko" data-type="Figuras Estática" data-price="10990">
+                        <div class="card product-card">
+                            <img src="Productos-img/RAGE 2 - IMMORTAL SHROUDED.webp" class="card-img-top product-img"
+                                alt="Product 2">
+                            <div class="card-body">
+                                <h5 class="card-title">POP GAMES: RAGE 2 - IMMORTAL SHROUDED</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $10.990</span><br>
+                                    In Stock
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="col-md-4 mb-4" data-brand="Funko" data-type="Figuras Estática" data-price="20000">
+                        <div class="card product-card">
+                            <img src="Productos-img/MARVEL VS CAPCOM.webp" class="card-img-top product-img"
+                                alt="Product 3">
+                            <div class="card-body">
+                                <h5 class="card-title">POP-FIGURA POP GAMES MARVEL VS CAPCOM INFINITE 2PK CAPT MARVEL VS
+                                    CHUN-LI</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $20.000</span> <del>$24.990</del> <br>
+                                    20% dcto
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Bandai-->
+                <div class="row">
+                    <!-- Product Card 4 -->
+                    <div class="col-md-4 mb-4" data-brand="Bandai" data-type="Figuras Articuladas" data-price="39990">
+                        <div class="card product-card">
+                            <img src="Productos-img/thor.webp" class="card-img-top product-img" alt="Product 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Avengers Battle of New York Edition: Thor S.H. Figuarts</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $39.990</span><br>
+                                    In Stock
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 5 -->
+                    <div class="col-md-4 mb-4" data-brand="Bandai" data-type="Figuras Articuladas" data-price="58496">
+                        <div class="card product-card">
+                            <img src="Productos-img/AMERICA.webp" class="card-img-top product-img" alt="Product 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Avengers Tech-On Avengers CAPTAIN AMERICA S.H.Figuarts</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $58.496</span> <del>$129.990</del> <br>
+                                    In Stock 54% dcto
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 6 -->
+                    <div class="col-md-4 mb-4" data-brand="Bandai" data-type="Figuras Articuladas" data-price="44995">
+                        <div class="card product-card">
+                            <img src="Productos-img/thanos.webp" class="card-img-top product-img"
+                                alt="Product 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Avengers Infinity War Thanos S.H.Figuarts de Bandai</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $44.995</span><br>
+                                    Sold Out
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Bandai hobby-->
+                <div class="row">
+                    <!-- Product Card 4 -->
+                    <div class="col-md-4 mb-4" data-brand="Bandai hobby" data-type="Maqueta Armable" data-price="47992">
+                        <div class="card product-card">
+                            <img src="Productos-img/hine.webp" class="card-img-top product-img" alt="Product 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Digimon SHINEGREYMON Figure Rise Standard </h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $47.992</span><br>
+                                    In Stock
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 5 -->
+                    <div class="col-md-4 mb-4" data-brand="Bandai hobby" data-type="Maqueta Armable" data-price="22744">
+                        <div class="card product-card">
+                            <img src="Productos-img/duke.webp" class="card-img-top product-img" alt="Product 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Digimon Tamers DUKEMON Figure Rise Standard</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $22.744</span> <del>$34.990</del> <br>
+                                    Sold Out 34% dcto
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 6 -->
+                    <div class="col-md-4 mb-4" data-brand="Bandai hobby" data-type="Figuras Articuladas" data-price="19990">
+                        <div class="card product-card">
+                            <img src="Productos-img/uzu.webp" class="card-img-top product-img"
+                                alt="Product 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Uzumaki Naruto Figure Rise Standard</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $19.990</span><br>
+                                    In Stock
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Good Smile Company-->
+                <div class="row">
+                    <!-- Product Card 4 -->
+                    <div class="col-md-4 mb-4" data-brand="Good Smile Company" data-type="Figuras Articuladas" data-price="48743">
+                        <div class="card product-card">
+                            <img src="Productos-img/chaw.webp" class="card-img-top product-img" alt="Product 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Chainsaw Man Denji Nendoroid</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $48.743</span><br>
+                                    In Stock
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 5 -->
+                    <div class="col-md-4 mb-4" data-brand="Good Smile Company" data-type="Figuras Articuladas" data-price="101243">
+                        <div class="card product-card">
+                            <img src="Productos-img/hasbri.webp" class="card-img-top product-img" alt="Product 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Kimetsu no Yaiba HASHIBIRA INOZUKE Figma DX Ver.</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $101.243</span> <del>$134.990</del> <br>
+                                    In Stock 24% dcto
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 6 -->
+                    <div class="col-md-4 mb-4" data-brand="Good Smile Company" data-type="Figuras Estática" data-price="26990">
+                        <div class="card product-card">
+                            <img src="Productos-img/yuji.webp" class="card-img-top product-img"
+                                alt="Product 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Jujutsu kaisen Yuji Itadori POPUP Parade</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $26.990</span><br>
+                                  In Stock
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Hasbro-->
+                <div class="row">
+                    <!-- Product Card 4 -->
+                    <div class="col-md-4 mb-4" data-brand="Hasbro" data-type="Figuras Articuladas" data-price="20994">
+                        <div class="card product-card">
+                            <img src="Productos-img/red.webp" class="card-img-top product-img" alt="Product 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Mighty Morphin Power Ranger RED RANGER Lightning Collection</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $20.994</span><br>
+                                    In Stock
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 5 -->
+                    <div class="col-md-4 mb-4" data-brand="Hasbro" data-type="Figuras Articuladas" data-price="24745">
+                        <div class="card product-card">
+                            <img src="Productos-img/moon.webp" class="card-img-top product-img" alt="Product 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Moon Knight Marvel Legends Series</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $24.745</span> <del>$44.990</del> <br>
+                                    In Stock 44% dcto
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 6 -->
+                    <div class="col-md-4 mb-4" data-brand="Hasbro" data-type="Figuras Articuladas" data-price="21995">
+                        <div class="card product-card">
+                            <img src="Productos-img/maul.webp" class="card-img-top product-img"
+                                alt="Product 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Star Wars Darth Maul (Mandalore) 6-Inch Action Figure The Black Series.</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $21.995</span> <del>$39.990</del> <br>
+                                    44% dcto
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--MAFEX-->
+                <div class="row">
+                    <!-- Product Card 4 -->
+                    <div class="col-md-4 mb-4" data-brand="MAFEX" data-type="Figuras Articuladas" data-price="81743">
+                        <div class="card product-card">
+                            <img src="Productos-img/noir.webp" class="card-img-top product-img" alt="Product 4">
+                            <div class="card-body">
+                                <h5 class="card-title">The Boys! Black Noir MAFEX</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $81.743</span><br>
+                                    In Stock
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 5 -->
+                    <div class="col-md-4 mb-4" data-brand="MAFEX" data-type="Figuras Articuladas" data-price="83993">
+                        <div class="card product-card">
+                            <img src="Productos-img/deadd.webp" class="card-img-top product-img" alt="Product 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Deadpool X-Force Ver. MAFEX</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $83.993</span> <del>$119.990</del> <br>
+                                    In Stock 30% dcto
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 6 -->
+                    <div class="col-md-4 mb-4" data-brand="MAFEX" data-type="Figuras Articuladas" data-price="90994">
+                        <div class="card product-card">
+                            <img src="Productos-img/loki.webp" class="card-img-top product-img"
+                                alt="Product 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Avengers Infinity War LOKI MAFEX</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">de $90.994</span> <del>$139.990</del> <br>
+                                    34% dcto
+                                </p>
+                                <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer class="py-3 my-4 bg-light">
+        <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+    </footer>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Script/catalogo.js"></script>
+    <script src="Script/navbar.js"></script>
+</body>
+
+</html>
